@@ -2,12 +2,12 @@ package pl.rodzyn.lotto;
 
 public class MessagePrinter {
 
-    public void printText(String text){
+    public void printText(String text) {
         System.out.println(text);
     }
 
     public void printMessage(int size) {
-        switch (size){
+        switch (size) {
             case 0:
                 System.out.println("You haven't hit any numbers");
                 break;
@@ -32,12 +32,12 @@ public class MessagePrinter {
         }
     }
 
-    public void formatString(String text){
+    public void formatString(String text) {
         String formattedText = String.format("%25s", text);
         System.out.print(formattedText);
     }
 
-    public void formatInteger(int number){
+    public void formatInteger(int number) {
         String formattedText = String.format("%2s", number);
         System.out.print(formattedText + " ");
     }

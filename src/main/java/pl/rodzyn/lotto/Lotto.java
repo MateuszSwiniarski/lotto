@@ -14,11 +14,10 @@ public class Lotto implements Game {
 
     @Override
     public void start() {
-        listOfGeneratedRandomNumber = generator.generateRandomNumbers(NUMBERS_TO_HIT);
-        listOfNumberProvidedByUser = generator.provideNumberByUser(NUMBERS_TO_HIT);
+        listOfGeneratedRandomNumber = getGenerator().generateRandomNumbers(NUMBERS_TO_HIT);
+        listOfNumberProvidedByUser = getGenerator().provideNumberByUser(NUMBERS_TO_HIT);
         checkHowManyNumberHit();
         listOfNumberProvidedByUser.retainAll(listOfGeneratedRandomNumber);
-
     }
 
     private void checkHowManyNumberHit() {
@@ -30,7 +29,6 @@ public class Lotto implements Game {
 
         int size = checkHitNumbers();
         getWriter().printMessage(size);
-
     }
 
     private void printNumberFromList(Set<Integer> list){
@@ -41,8 +39,5 @@ public class Lotto implements Game {
     private int checkHitNumbers() {
         listOfNumberProvidedByUser.retainAll(listOfGeneratedRandomNumber);
         return listOfNumberProvidedByUser.size();
-
     }
-
-
 }
