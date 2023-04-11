@@ -33,12 +33,12 @@ public class MessagePrinter {
     }
 
     public void formatString(String text){
-        String formatedText = String.format("%25s", text);
-        System.out.print(formatedText);
+        String formattedText = String.format("%25s", text);
+        System.out.print(formattedText);
     }
 
     public void formatInteger(int number){
-        String formatedText = String.format("%2s", number);
-        System.out.print(formatedText + " ");
+        String formattedText = String.format("%2s", number);
+        System.out.print(formattedText + " ");
     }
 }
