@@ -17,7 +17,6 @@ public class Lotto implements Game {
         listOfGeneratedRandomNumber = getGenerator().generateRandomNumbers(NUMBERS_TO_HIT);
         listOfNumberProvidedByUser = getGenerator().provideNumberByUser(NUMBERS_TO_HIT);
         checkHowManyNumberHit();
-        listOfNumberProvidedByUser.retainAll(listOfGeneratedRandomNumber);
     }
 
     private void checkHowManyNumberHit() {
