@@ -1,4 +1,4 @@
-package pl.rodzyn.lotto;
+package pl.rodzyn.lotto.service;
 
 public class MessagePrinter {
 
@@ -6,39 +6,45 @@ public class MessagePrinter {
         System.out.println(text);
     }
 
-    public void printMessage(int size) {
+    public void printTextInTheSameLine(String text){
+        System.out.print(text);
+    }
+
+    public String printMessage(int size) {
+        String result = "";
         switch (size) {
             case 0:
-                printText("You haven't hit any numbers");
+                result = "You haven't hit any numbers";
                 break;
             case 1:
-                printText("You hit one number");
+                result = "You hit one number";
                 break;
             case 2:
-                printText("You hit two numbers");
+                result = "You hit two numbers";
                 break;
             case 3:
-                printText("You hit three numbers");
+                result = "You hit three numbers";
                 break;
             case 4:
-                printText("You hit four numbers");
+                result = "You hit four numbers";
                 break;
             case 5:
-                printText("You hit five numbers");
+                result = "You hit five numbers";
                 break;
             case 6:
-                printText("YOU WIN, you hit 6 numbers");
+                result = "YOU WIN, you hit 6 numbers";
                 break;
         }
+        return result;
     }
 
     public void formatString(String text) {
         String formattedText = String.format("%25s", text);
-        System.out.print(formattedText + " ");
+        printTextInTheSameLine(formattedText + " ");
     }
 
     public void formatInteger(int number) {
         String formattedText = String.format("%2s", number);
-        System.out.print(formattedText + " ");
+        printTextInTheSameLine(formattedText + " ");
     }
 }

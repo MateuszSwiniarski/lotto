@@ -1,6 +1,7 @@
-package pl.rodzyn.lotto;
+package pl.rodzyn.lotto.service;
 
 import org.junit.jupiter.api.Test;
+import pl.rodzyn.lotto.service.NumberGenerator;
 
 import java.util.Arrays;
 import java.util.HashSet;

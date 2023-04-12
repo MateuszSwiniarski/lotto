@@ -1,6 +1,8 @@
-package pl.rodzyn.lotto;
+package pl.rodzyn.lotto.service;
 
 import org.junit.jupiter.api.Test;
+import pl.rodzyn.lotto.service.MessagePrinter;
+
 import static org.mockito.Mockito.*;
 
 class MessagePrinterTest {

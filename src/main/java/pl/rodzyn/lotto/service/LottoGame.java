@@ -1,4 +1,7 @@
-package pl.rodzyn.lotto;
+package pl.rodzyn.lotto.service;
+
+import pl.rodzyn.lotto.Game;
+import pl.rodzyn.lotto.model.Lotto;
 
 import java.util.Set;
 
@@ -13,18 +16,21 @@ public class LottoGame implements Game {
     public void start() {
         lotto.setListOfGeneratedRandomNumber(generator.generateRandomNumbers(NUMBERS_TO_HIT));
         lotto.setListOfNumberProvidedByUser(generator.provideNumberByUser(NUMBERS_TO_HIT));
-        checkHowManyNumberHit();
+        printGenerateSets();
+        writer.printText(showResult(checkHitNumbers()));
+
     }
 
-    private void checkHowManyNumberHit() {
+    public String showResult(int hitSize) {
+        return writer.printMessage(hitSize);
+    }
+
+    private void printGenerateSets(){
         writer.formatString("Drawn numbers: ");
         printNumberFromList(lotto.getListOfGeneratedRandomNumber());
 
         writer.formatString("Entered numbers by User: ");
         printNumberFromList(lotto.getListOfNumberProvidedByUser());
-
-        int size = checkHitNumbers();
-        writer.printMessage(size);
     }
 
     private void printNumberFromList(Set<Integer> list) {

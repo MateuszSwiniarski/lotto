@@ -1,4 +1,4 @@
-package pl.rodzyn.lotto;
+package pl.rodzyn.lotto.service;
 
 import lombok.Data;
 
